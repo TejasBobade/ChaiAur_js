@@ -1,0 +1,73 @@
+<!-- // DOM (Document Object Model) -->
+ 
+<!-- 
+console.log(document)             
+console.log(document.baseURI)      // Gives base page url
+console.log(document.links)        // Gives HTML collection
+console.log(document.links[2])
+document.getElementById('root')    //<div id=​"root" style=​"--ntp-extra-content-effect-multiplier:​ 0;​ --ntp-scroll-percent:​ -0.07065217391304347;​ --ntp-fixed-content-height:​ 394px;​">​…​</div>​
+document.getElementById('root').innerHTML = "Money and Revenue"
+**********************************************************************************************
+document.getElementById('title')
+document.getElementById('title').id
+document.getElementById('title').className
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+document.getElementById('title').setAttribute('class','test')
+
+title.textContent       -> 'Dom learning on chai aur code test text.' -> it also show the hidden text that may be hidden using display or something else
+title.innerText         -> 'Dom learning on chai aur code.' -> show the text which is on the browser screen
+title.innerHTML         -> This also suport the html tags 
+
+document.querySelector('h1')
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector("input[type='password']")
+
+const myUl = document.querySelector('ul')
+const turnGreen = myUl.querySelector('li')
+turnGreen.style.backgroundColor = "green"
+turnGreen.innerText = "five"
+
+const myLiList = document.querySelectorAll('li') -> gives nodeList
+myLiList
+myLiList[0].style.color = "green"               -> you have a nodeList so you have to mention the position also
+myLiList.forEach((item) =>{
+    item.style.backgroundColor = "Yellow";
+});
+
+const tempClassList = document.getElementsByClassName('list-item')
+const myConvertedArray = Array.from(tempClassList)
+
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Dom learning on chai aur code. <span style="display: none;">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nam!</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="pass" id="pass1">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>

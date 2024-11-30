@@ -1,0 +1,55 @@
+html {
+    margin: 0;
+  }
+body{
+    background-color: #212121;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color : #f4a81b;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+  
+span {
+    display: block;
+}
+.canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+    color: #f4a81b;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+}
+
+#grey {
+    background: grey;
+}
+
+#white {
+    background: white;
+}
+#blue {
+    background: blue;
+}
+#yellow {
+    background: yellow;
+}
+
+#purple {
+    background-color: purple;
+}

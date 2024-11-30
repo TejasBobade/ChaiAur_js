@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body  style="background-color: #414141; color: aliceblue ;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="fashion" src="images/1-Perfect for Fashion & Style Content-1-1.png" alt="1-Perfect"></li>
+            <li><img width="200px" id="wellness-1" src="images/2-Perfect for Fitness & Wellness Content-2-1.png" alt="2-Perfect"></li>
+            <li><img width="200px" id="wellness-2" src="images/2-Perfect for Fitness & Wellness Content-2-2.png" alt="Content-2-2"></li>
+            <li><img width="200px" id="stylish" src="images/3-Perfect for Casual & Stylish Content-3-1.png" alt="3-Perfect"></li>
+            <li><img width="200px" id="beauty" src="images/4-Perfect for Beauty & Makeup Content-1.png" alt="4-Perfect"></li>
+            <li><img width="200px" id="office-1" src="images/5-Perfect for Office & Work Content-1.png" alt="5-Perfect"></li>
+            <li><img width="200px" id="office-2" src="images/5-Perfect for Office & Work Content-2.png" alt="5-Perfect-2"></li>
+            <li><img width="200px" id="casual-1" src="images/6-Perfect for Casual Outdoor scenes-1.png" alt="6-Perfect"></li>
+            <li><a style="color: aliceblue;" id="google" href="https://google.com">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<!-- // majority of js event run sequentially ther are some exception -->
+ <!-- This event envoke do to some activity ex. mouserOver , mouseOn , mouseClick , onClick , Click , drag and drop etc. -->
+<script>
+    // The below appoarch is right but onClick give us less features and there are better alternative
+    // document.getElementById('fashion').onClick = function(){
+    //     alert("Fashion & Style Content.");
+    // }
+
+    // attachEvent() -> used in old language 
+    // jQuery - .on  -> similar functionality as addEventListener
+
+    // type , timeStamp , defaultPrevent
+    // target , toElement , srcElement , currentTarget
+    //clientX , clientY , screenX , screenY
+    // altKey , ctrlKey , shiftKey , keyCode
+
+    // interview -> third parameter in addEventListener -> by default is false -> some task needs to define it 
+    // study for about event object
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     // mostly you will get browser and environment events
+    //     // interview -> timeStamp , add circle where user mouse arrow present
+    //     console.log(e)
+    // },false)
+    // event propagation has two contex -> 1. event bubbling(majorly used -> false) 2. event capturing(true)
+    // 1.bubbling -> inside to outside -> ex. here we goes from image to ul
+    // 2.capturing -> outside to inside -> ex. we click on image but first come is ul then image
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Clicked on the ul");
+    // },false);
+
+    // document.getElementById('fashion').addEventListener('click',function(e){
+    //     console.log("Fashion clicked");
+    //     e.stopPropagation();
+    // },false);
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     console.log("Google clicked")
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // })
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode);
+        // event spile over -> removed the unwanted funcionality -> ex. li , a => remove
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+
+    },false)
+    // removeIt.parentNode.removeChild(removeIt)
+
+</script> 
+</html>

@@ -1,0 +1,40 @@
+<!-- 4.21 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur code</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // This are not a just core function  of JS you get this through browser -> Not a core JS Function
+    // call goes out and you get the access through event queue 
+    // Interview -> clearInterval , clearTimeout , stopInterval , setInterval
+    // setInterval(handler,timeOut,arguments)
+
+    const sayTejas = function(){
+        console.log("Tejas")
+    };
+
+    const changeText =function() {
+        document.querySelector('h1').innerHTML = "Best Js series with Practical Knowledge";
+    };
+
+    // We are giving reference instead of direct function
+    setInterval(sayTejas,2000);
+    const changeMe = setInterval(changeText,2000);
+
+    
+    document.querySelector('#stop').addEventListener('click',function(e){
+        console.log(changeMe);
+        clearTimeout(changeMe);
+        console.log("STOPPED")
+
+    })
+
+</script>
+</html>
