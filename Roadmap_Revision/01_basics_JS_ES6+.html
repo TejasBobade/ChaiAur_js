@@ -1,0 +1,132 @@
+<!-- 
+ ## 11. Basics of Javascript with ES6+ Features 🚀
+
+- Introduction to JavaScript, Why it is Important! and What can it do for you?
+- How to link javascript files using `script-tag` .
+- Running JavaScript in the Browser Console .
+- Variables and Keywords in Javascript [ `var` , `let` , `const` ].
+- Logging with javascript - [`console.log()` , `console.info()` , `console.warn()` , `prompt` , `alert` ]
+- Working with String in JS and there -[`splice` , `slice` , `template string` , `split` , `replace` , `includes` ]
+- What are Statement and Semicolons in JS
+- How to add Comments in JavaScript
+- What are Expression in Js and difference between expression and statement
+- JavaScript Data Types - [`float` , `number` , `string` , `boolean` , `null` , `array` , `object` , `Symbol` , `Undefined` ]
+- Some Important Values - [`undefined` , `null` , `NaN` , `Infinity` ]
+- Relative and Primitive Data Type in JavaScript
+- Basic Operators(Arithmetic, Assignment, Increment, Decrement, Comparison, Logical, Bitwise) - [`+` , `-` , `*` , `/` ,`++`  , `--` , `==` , `===` , `!=` ,`and more` ]
+- Variable hoisting in JavaScript 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Javascript with ES6+ Features 🚀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+    <script>
+        /** 
+        // Variables and Keywords in Javascript [ `var` , `let` , `const` ].
+
+        // This variable could introduce error in the program 
+        // It can be redeclared and can be modified
+        var num1 = 32;
+        console.log(num1);
+        num1 = 50;
+        console.log(num1);
+        // ex. below
+        var num1 = 45;
+        console.log(num1);
+        num1 = 100;
+        console.log(num1);
+          
+        // Let can not be re-declared but can be modified it's an variable
+        let num2 = 12;
+        console.log(num2);
+        num2 = 45;
+        console.log(num2);
+        // ex. below
+        // Cannot redeclare block-scoped variable 'num2'.
+        // Uncaught SyntaxError: Identifier 'num2' has already been declared
+        let num2 = 23; 
+
+        // Const can'e be re-declared or modified it's an constsnt value which can't be changed
+        const num3 = 100;
+        console.log(num3);
+        // ex. below
+        // Uncaught TypeError: Assignment to constant variable.
+        num3 = 50;
+        console.log(num3);
+        // Cannot redeclare block-scoped variable 'num3'.
+        // Uncaught SyntaxError: Identifier 'num3' has already been declared
+        const num3 = 25;
+        console.log(num3);
+        **/
+      
+        /**
+        Logging with javascript - [`console.log()` , `console.info()` , `console.warn()` , `prompt` , `alert` ]
+
+        // Used to print something in colsole of browser
+        console.log("Happy Holiday");
+        console.info(100,1000,25,2500)
+        // Gives warning in console with small warning symbol and the warning is in yellow color different than usual color also gives where this warning comming from.
+        console.warn("This is a warning for all.")
+
+        // The screen will pop up ask for input
+        // We can strore the input in variable and then console log it
+        let string1 = prompt("This is message string", "This is deafault string");
+        console.log(string1);
+
+        // Give a alert in from of pop up message
+        alert("This is emerjency your computer is compromized please contact here.");
+        **/
+
+        /** 
+        Working with String in JS and there -[`splice` , `slice` , `template string` , `split` , `replace` , `includes` ]
+
+        let str1 = "This is a string used for splice , slice , splite , replace , includes";
+        console.log(str1);
+        // slice don't change the original string
+        console.log(str1.slice(0,12));
+        console.log(str1);
+
+         let a = 23;
+        let b = 23;
+        // The template string is used to add variable in string and do computation inside the string.
+        let temStr = `This is a template string used for This multiple reason we can even add variables we and do computing we in it ${a + b}.`
+        console.log(temStr);
+        // This will splite the string where we find the given character in string first and the secnd which is number will be number of time it going to splite but it depends on the character give for splite 
+        // ex. character = go number = 5 , but chacter only comes in sentence three time then it will splite only three time.
+        console.log(temStr.split("we",5));
+        console.log(temStr);
+        // Replace only first character that is in the string not all
+        console.log(temStr.replace("This","Those"));
+        console.log(temStr);
+        // We can chack whereter the letter is present or not also we can give the starting value from which it will chack for pressence of letter.
+        console.log(temStr.includes("template",25));
+
+        **/
+       
+        
+        
+        
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>Baisc JS Practice</h1>
+</body>
+</html>
