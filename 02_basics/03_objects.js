@@ -1,5 +1,4 @@
 // sigleton => it's the object created using constructor and not a literal
-// Object.create
 
 // Object literals
 // keys by default processed as a string
@@ -21,7 +20,7 @@ const JsUser = {
 // console.log(JsUser["email"])
 
 // console.log(JsUser.full Name)
-// console.log(JsUser["fullName"]) 
+// console.log(JsUser["full Name"]) 
 // console.log(JsUser.mySym)             // -> undefined
 console.log(JsUser[mySym])
 // console.log(typeof JsUser[mySym])

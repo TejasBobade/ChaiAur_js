@@ -25,7 +25,7 @@ map.set("Fr" , "France");
 map.set("IN" , "India");
 
 // console.log(map)
-// array di-structure [key , value]
+// array destructure [key , value]
 // for (const [key , value] of map) {
 //     console.log(key , ":-" , value)
 // }

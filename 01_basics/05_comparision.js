@@ -21,5 +21,5 @@
 
 // ===     (check if the values are equals also check if the data types of the values are same or not.)
 
-// console.log("5" == 5)
-// console.log("5" === 5)
+// console.log("5" == 5)    // true
+// console.log("5" === 5)   // false
